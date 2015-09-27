@@ -1,6 +1,6 @@
 # Qiro Logo
 
-This project generate the qiro logo.
+This project generates the qiro logo.
 
 ![The qiro logo](https://raw.githubusercontent.com/qiro/qiro-logo/master/qiro-logo_256x256.jpg)
 
@@ -8,10 +8,10 @@ The logo is based on an image generated from a fractal of the Julia Set, the com
  is:
   `f(x + iy) = f(z) = z^2 - 0.2`.
 
-This fractal is often named "Glynn Tree", named after Earl Glynn who was one of the first to 
+This fractal is often named "Glynn Tree", named after Earl Glynn, who was one of the first to 
 generate images based on the previous formula.
 See the [GlynnTree.java](https://github.com/qiro/qiro-logo/blob/master/src/main/java/io/qiro/logo/GlynnTree.java) 
-file for more details about the computation. There are two post processing:
+file for more details about the computation. There are two custom post-processings:
 
 - the surrounding dark color is removed by thresholding
 - the grey color of the tree is accentuated (via a square function)
