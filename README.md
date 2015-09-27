@@ -10,7 +10,7 @@ The logo is based on an image generated from a fractal of the Julia Set, the com
 
 This fractal is often named "Glynn Tree", named after Earl Glynn who was one of the first to 
 generate images based on the previous formula.
-See the [GlynnTree.java](https://raw.githubusercontent.com/qiro/qiro-logo/master/src/main/java/io/qiro/logo/GlynnTree.java) 
+See the [GlynnTree.java](https://github.com/qiro/qiro-logo/blob/master/src/main/java/io/qiro/logo/GlynnTree.java) 
 file for more details about the computation. There are two post processing:
 
 - the surrounding dark color is removed by thresholding
@@ -22,7 +22,8 @@ Simply run `./gradlew run` to generate a 2048x2048px logo at the root of the pro
 The image is PNG encoded with the name `qiro-logo_2048x2048.png`.
 
 To resize the image, we recommand using imagemagick, e.g.:
-`convert qiro-logo_2048x2048.png -resize 512x512 qiro-logo_512x512.jpg`
+
+`convert qiro-logo_2048x2048.png -resize 256x256 qiro-logo_256x256.jpg`
 
 ## LICENSE
 
