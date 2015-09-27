@@ -4,7 +4,7 @@ This project generates the qiro logo.
 
 ![The qiro logo](https://raw.githubusercontent.com/qiro/qiro-logo/master/qiro-logo_256x256.jpg)
 
-The logo is based on an image generated from a fractal of the Julia Set, the complex function used
+The logo is based on an image generated from a fractal of the [Julia Set](https://en.wikipedia.org/wiki/Julia_set), the complex function used
  is:
   `f(x + iy) = f(z) = z^1.5 - 0.2`.
 
