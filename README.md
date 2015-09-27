@@ -6,7 +6,7 @@ This project generates the qiro logo.
 
 The logo is based on an image generated from a fractal of the Julia Set, the complex function used
  is:
-  `f(x + iy) = f(z) = z^2 - 0.2`.
+  `f(x + iy) = f(z) = z^1.5 - 0.2`.
 
 This fractal is often named "Glynn Tree", named after Earl Glynn, who was one of the first to 
 generate images based on the previous formula.
