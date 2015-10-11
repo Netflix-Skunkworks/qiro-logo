@@ -29,7 +29,7 @@ public class GlynnTree {
         double whiteThreshold,
         int size
     ) {
-        BufferedImage image = new BufferedImage(size, size, BufferedImage.TYPE_INT_RGB);
+        BufferedImage image = new BufferedImage(size, size, BufferedImage.TYPE_INT_ARGB);
 
         double xmin = xcenter - xrange / 2;
         double xmax = xcenter + xrange / 2;
@@ -57,11 +57,12 @@ public class GlynnTree {
                 double z = buffer[i][j];
                 z = (z - min) / range;
                 if (z < whiteThreshold) {
-                    z = 1; // replace the surrounding black by white color
+                    image.setRGB(size - j - 1, size - i - 1, new Color(255, 255, 255, 0).getRGB());
+                } else {
+                    z = Math.pow(z, 5);
+                    int rgb = (int) (255 * z);
+                    image.setRGB(size - j - 1, size - i - 1, new Color(rgb, rgb, rgb).getRGB());
                 }
-                z = z * z;
-                int rgb = (int) (255 * z);
-                image.setRGB(size - j - 1, size - i - 1, new Color(rgb, rgb, rgb).getRGB());
             }
         }
 
@@ -122,9 +123,9 @@ public class GlynnTree {
         double yrange = 0.4;
         int maxIteration = 105;
         double whiteThreshold = 0.35;
-        int size = 2048;
+        int size = 4096;
 
-        //GlynnTree.show(xcenter, xrange, ycenter, yrange, maxIteration, whiteThreshold, 1024);
+//        GlynnTree.show(xcenter, xrange, ycenter, yrange, maxIteration, whiteThreshold, size);
         File output = new File("qiro-logo_" + size + "x" + size + ".png");
         GlynnTree.generateImage(
             xcenter, xrange,

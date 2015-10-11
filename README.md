@@ -8,22 +8,26 @@ The logo is based on an image generated from a fractal of the Julia Set, the com
  is:
   `f(x + iy) = f(z) = z^2 - 0.2`.
 
-This fractal is often named "Glynn Tree", named after Earl Glynn, who was one of the first to 
+This fractal is often named "Glynn Tree", named after Earl Glynn, who was one of the first to
 generate images based on the previous formula.
-See the [GlynnTree.java](https://github.com/qiro/qiro-logo/blob/master/src/main/java/io/qiro/logo/GlynnTree.java) 
+See the [GlynnTree.java](https://github.com/qiro/qiro-logo/blob/master/src/main/java/io/qiro/logo/GlynnTree.java)
 file for more details about the computation. There are two custom post-processings:
 
-- the surrounding dark color is removed by thresholding
-- the grey color of the tree is accentuated (via a square function)
+- the surrounding dark color is removed by thresholding (replaced by transparent)
+- the grey color of the tree is accentuated (via a power function)
 
 ## Generate the logo
 
-Simply run `./gradlew run` to generate a 2048x2048px logo at the root of the project.
-The image is PNG encoded with the name `qiro-logo_2048x2048.png`.
+Simply run `./gradlew run` to generate a 4096x4096px logo at the root of the project.
+The image is PNG encoded with the name `qiro-logo_4096x4096.png`.
 
 To resize the image, we recommand using imagemagick, e.g.:
 
 `convert qiro-logo_2048x2048.png -resize 256x256 qiro-logo_256x256.jpg`
+
+`make-all-logos.sh` will generate the master file (4096x4096) as well as a serie of
+resized ones (2048, 1024, 512, 256) in png and jpeg format (using imagemagick, its
+resampling algorithm make better images).
 
 ## LICENSE
 

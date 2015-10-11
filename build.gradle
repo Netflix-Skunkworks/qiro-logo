@@ -16,6 +16,8 @@
 description = 'Qiro logo generator'
 apply plugin: 'java'
 apply plugin: 'application'
+apply plugin: 'idea'
+
 mainClassName = "io.qiro.logo.GlynnTree"
 
 repositories {
